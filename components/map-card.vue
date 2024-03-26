@@ -2,7 +2,7 @@
   <div style="width: 100%">
     <iframe
       width="100%"
-      height="600"
+      class="h-[600px] max-md:h-[360px]"
       frameborder="0"
       scrolling="no"
       marginheight="0"
