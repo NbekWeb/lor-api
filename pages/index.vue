@@ -11,10 +11,10 @@
       <div class="w-full px-28 max-md:px-0">
         <Contact class="mt-28 max-md:mt-16" />
       </div>
-      <AboutUs class="hidden mt-28" />
-      <Doctors class="hidden" />
-      <Certificate class="hidden" />
-      <Comments class="hidden" />
+      <AboutUs class="mt-28 max-md:mt-16" />
+      <Doctors class="" />
+      <Certificate class="" />
+      <Comments class="" />
       <Consultation class="hidden" />
     </div>
     <Foot class="hidden" />
