@@ -1,29 +1,38 @@
 <template>
-  <div class="relative w-full h-[300px] rounded-xl bg-blue px-16">
-    <div class="flex items-center justify-between h-full">
-      <p class="w-1/2 text-4xl text-white font-unbounded">
+  <div
+    class="relative w-full h-[300px] rounded-xl bg-blue px-16 max-md:h-[450px] max-md:px-4 py-6"
+  >
+    <div
+      class="flex flex-row items-center justify-between h-full max-md:flex-col max-md:items-center"
+    >
+      <p
+        class="relative z-20 w-1/2 text-4xl text-white top-6 font-unbounded max-md:text-xl max-md:leading-6 max-md:w-full max-md:mb-8"
+      >
         Решите ваши проблемы вместе с нашими докторами
       </p>
       <el-form
         :model="ruleForm"
         :rules="rules"
         ref="ruleForm"
-        label-width="120px"
+        label-width="100%"
         class="demo-ruleForm"
       >
-        <div class="flex gap-6">
+        <div class="flex flex-row gap-6 max-md:flex-col">
           <el-form-item label="Имя" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item>
           <el-form-item label="Номер" prop="phone">
             <el-input v-model="ruleForm.phone"></el-input>
-          </el-form-item> 
+          </el-form-item>
         </div>
         <el-form-item label="Проблема" prop="problem">
           <el-input v-model="ruleForm.problem"></el-input>
         </el-form-item>
         <div>
-          <el-button type="primary" @click="submitForm('ruleForm')" class="rounded-xl"
+          <el-button
+            type="primary"
+            @click="submitForm('ruleForm')"
+            class="relative z-20 mt-5 rounded-xl"
             >Отправить</el-button
           >
         </div>
@@ -33,17 +42,17 @@
       <img
         src="@/assets/img/heart1.png"
         alt="heart"
-        class="w-[90px] h-auto absolute top-0 left-[20%]"
+        class="w-[90px] h-auto absolute top-0 left-[20%] max-md:left-[80%] max-md:w-16"
       />
       <img
         src="@/assets/img/heart2.png"
         alt="heart"
-        class="w-[90px] h-auto absolute bottom-0 left-14"
+        class="w-[90px] h-auto absolute bottom-0 left-14 max-md:left-0 max-md:w-16"
       />
       <img
         src="@/assets/img/heart3.png"
         alt="heart"
-        class="w-[90px] h-auto absolute bottom-0 right-[20%]"
+        class="w-[90px] h-auto absolute bottom-0 right-[20%] max-md:hidden"
       />
     </div>
   </div>
@@ -126,11 +135,10 @@ export default {
   color: #ebebeb !important;
   text-align: left !important;
   padding: 0 !important;
-  font-family: 'Unbounded' !important;
+  font-family: "Unbounded" !important;
 }
 .el-form-item__label {
   width: auto !important;
-
 }
 .el-input__inner {
   background: inherit !important;
@@ -141,11 +149,10 @@ export default {
 .el-form-item__content {
   margin-left: 10px !important;
 }
-.el-button--primary span{
-  font-family: 'Unbounded' !important;
+.el-button--primary span {
+  font-family: "Unbounded" !important;
 }
 .el-button {
-  margin-top: 20px;
   width: 100% !important;
   border: 1px solid #fff !important;
   background: #fff !important;
@@ -153,11 +160,18 @@ export default {
   font-weight: 500 !important;
   font-size: 18px !important;
   line-height: 21px !important;
-  
 }
 
 .el-button:hover {
   background: inherit !important;
   color: #fff !important;
 }
+
+@media (max-width: 767px) {
+  .el-button{
+    font-size: 14px !important;
+  }
+}
+
+
 </style>
