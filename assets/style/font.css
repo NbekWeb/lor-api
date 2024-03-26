@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Inter;
+    src: url('../font/inter.woff');
+  }
+
+  @font-face {
+    font-family: Firs;
+    src: url('../font/firs.woff');
+  }
+
+  @font-face {
+    font-family: Unbounded;
+    src: url('../font/unbounded.woff');
+  }
