@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full mb-24 mt-52">
+  <div class="relative w-full mb-24 mt-52">
     <div class="mb-12 leading-4 text-center text-s px-52 text-grey">
-      <h3 class="text-5xl font-medium text-blue mb-7">
+      <h3 class="text-5xl font-medium text-blue mb-7 font-unbounded">
         Сертификаты и лицензии
       </h3>
       <p>
@@ -10,8 +10,13 @@
         связанных с трудом и великой скорбью.
       </p>
     </div>
+
     <div class="flex gap-6">
-      <div class="p-[10px] border rounded-lg border-blue" v-for="n of 6" :key="n">
+      <div
+        class="p-[10px] border rounded-lg border-blue"
+        v-for="n of 6"
+        :key="n"
+      >
         <img
           src="@/assets/img/sertifikat.png"
           alt="sertifikat"
@@ -21,7 +26,5 @@
     </div>
   </div>
 </template>
-<script>
-export default {};
-</script>
-<style lang=""></style>
+
+<style scoped></style>

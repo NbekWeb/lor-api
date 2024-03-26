@@ -1,12 +1,12 @@
 <template>
   <div class="w-full bg-blue">
     <div
-      class="container flex justify-around py-24 leading-4 text-white text-s"
+      class="container flex justify-around py-24 mx-auto leading-4 text-white text-s"
     >
       <img src="@/assets/img/logo.png" alt="logo" class="w-auto h-14" />
       <div class="">
         <p class="mb-6 text-3xl">Главная</p>
-        <div class="flex flex-col gap-y-3">
+        <div class="flex flex-col gap-y-3 foot">
           <p>Наши услуги</p>
           <p>О нас</p>
           <p>Доктора</p>
@@ -16,7 +16,7 @@
       </div>
       <div>
         <p class="mb-6 text-3xl">Услуги</p>
-        <div class="flex flex-col gap-y-3">
+        <div class="flex flex-col gap-y-3 foot">
           <p>Лечения уха</p>
           <p>Лечения носа</p>
           <p>Лечения горла</p>
@@ -25,7 +25,7 @@
       </div>
       <div>
         <p class="mb-6 text-3xl">Контакты</p>
-        <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-8 foot">
           <a
             target="_blank"
             :href="this.$store.state.loc"
@@ -58,4 +58,21 @@ export default {};
 .icon-white {
   filter: brightness(0) invert(1) grayscale(100%) contrast(100%);
 }
+
+.foot p {
+  margin-bottom: 18px;
+}
+
+.foot a {
+  margin-bottom: 32px;
+}
+
+.foot a,
+.foot p {
+  color: #ebebeb;
+}
+/* .foot a:hover,
+.foot p:hover {
+  color:#fff;
+} */
 </style>

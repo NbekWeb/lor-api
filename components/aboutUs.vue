@@ -1,10 +1,12 @@
 <template>
   <div class="w-full px-6 pb-6 border rounded-xl bg-light-back border-bor">
-    <div class="flex items-center justify-between pt-12 pb-6">
-      <div class="flex flex-col w-1/2 text-3xl font-semibold font-unbounded">
-        <p class="text-black">О “777 ЛОР”</p>
-        <p class="text-blue">Более 10 лет заботы о вашем здаровье</p>
-        <p class="font-normal leading-3 text-grey text-s">
+    <div class="flex justify-between gap-2 px-3 pt-12 pb-10">
+      <div class="flex flex-col w-1/2 text-3xl font-semibold">
+        <p class="mb-4 text-black font-unbounded">О “777 ЛОР”</p>
+        <p class="text-blue font-unbounded">
+          Более 10 лет заботы о вашем здаровье
+        </p>
+        <p class="font-normal leading-3 text-grey text-s font-unbounded mt-[22px]">
           Более 1000+ людей которые здоровые благодаря нам
         </p>
       </div>
@@ -17,7 +19,7 @@
       </p>
     </div>
     <div>
-        <img src="@/assets/img/aboutUs.png" alt="" class="w-full h-auto">
+      <img src="@/assets/img/aboutUs.png" alt="" class="w-full h-auto" />
     </div>
   </div>
 </template>

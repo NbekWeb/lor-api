@@ -17,13 +17,13 @@
           </el-form-item>
           <el-form-item label="Номер" prop="phone">
             <el-input v-model="ruleForm.phone"></el-input>
-          </el-form-item>
+          </el-form-item> 
         </div>
         <el-form-item label="Проблема" prop="problem">
           <el-input v-model="ruleForm.problem"></el-input>
         </el-form-item>
         <div>
-          <el-button type="primary" @click="submitForm('ruleForm')"
+          <el-button type="primary" @click="submitForm('ruleForm')" class="rounded-xl"
             >Отправить</el-button
           >
         </div>
@@ -126,9 +126,11 @@ export default {
   color: #ebebeb !important;
   text-align: left !important;
   padding: 0 !important;
+  font-family: 'Unbounded' !important;
 }
 .el-form-item__label {
   width: auto !important;
+
 }
 .el-input__inner {
   background: inherit !important;
@@ -139,16 +141,19 @@ export default {
 .el-form-item__content {
   margin-left: 10px !important;
 }
+.el-button--primary span{
+  font-family: 'Unbounded' !important;
+}
 .el-button {
   margin-top: 20px;
   width: 100% !important;
   border: 1px solid #fff !important;
   background: #fff !important;
   color: #3c4bdc !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   font-size: 18px !important;
   line-height: 21px !important;
-  font-family: 'Unbounded';
+  
 }
 
 .el-button:hover {

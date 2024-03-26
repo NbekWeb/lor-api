@@ -1,7 +1,7 @@
 <template>
   <div class="my-32 comment ">
     <div class="flex items-center justify-between">
-      <h3 class="text-5xl text-black">Отзывы</h3>
+      <h3 class="text-5xl font-semibold text-black font-unbounded">Отзывы</h3>
       <div class="flex gap-6">
         <button
           class="flex items-center justify-center border rounded-xl bg-blue hover:bg-white border-blue h-14 w-14"
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="flex gap-6 mt-14">
-        <Comment v-for="n of 4" :key="n"/>
+        <Comment v-for="n of 3" :key="n"/>
     </div>
   </div>
 </template>

@@ -1,17 +1,15 @@
 <template>
-  <div class="flex gap-10 p-6 bg-white rounded-xl service">
+  <div class="flex w-full gap-10 p-6 bg-white rounded-xl service">
     <img src="@/assets/img/servise.png" alt="" class="w-auto h-full" />
 
-    <div class="flex flex-col justify-between py-4 text-grey">
+    <div class="flex flex-col justify-between w-full py-4 text-grey">
       <p class="text-xl">Заболевания носа</p>
-      <div class="flex items-end justify-between gap-6">
+      <div class="flex items-end justify-between w-full gap-6">
         <div class="text-light-black">
           <p class="text-3xl font-semibold">
             Заболевания носа и околоносовых пазух
           </p>
-          <ul
-            class="flex flex-wrap justify-between mt-6 text-blue"
-          >
+          <ul class="flex flex-wrap gap-4 mt-6 text-blue">
             <li>• гайморит</li>
             <li>• сфеноидит</li>
             <li>• фронтит</li>
