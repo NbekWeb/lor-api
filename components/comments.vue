@@ -1,7 +1,7 @@
 <template>
   <div class="my-32 comment ">
     <div class="flex items-center justify-between">
-      <h3 class="text-5xl font-semibold text-black font-unbounded">Отзывы</h3>
+      <h3 class="text-5xl font-semibold text-black font-unbounded max-md:text-xl">Отзывы</h3>
       <div class="flex gap-6">
         <button
           class="flex items-center justify-center border rounded-xl bg-blue hover:bg-white border-blue h-14 w-14"

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full mt-10">
-    <h3 class="text-5xl font-semibold text-black font-unbounded">
+    <h3 class="text-5xl font-semibold text-black font-unbounded max-md:text-xl">
       Запись на консульта­цию
     </h3>
     <div>

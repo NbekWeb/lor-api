@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h3 class="mt-32 mb-20 text-5xl font-semibold text-black font-unbounded">
+    <h3
+      class="mt-32 mb-20 text-5xl font-semibold text-black font-unbounded max-md:text-xl"
+    >
       Наши доктора
     </h3>
     <div class="flex gap-16">

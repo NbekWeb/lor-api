@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center justify-between w-full h-12 leading-4 text-light-black max-xs:text-min max-xs:leading-3 text-s font-unbounded"
+    class="flex items-center justify-between w-full h-12 leading-4 text-light-black max-md:text-min max-md:leading-3 text-s font-unbounded"
   >
     <a
       class="flex items-center gap-2"

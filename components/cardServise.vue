@@ -1,15 +1,27 @@
 <template>
-  <div class="flex w-full gap-10 p-6 bg-white rounded-xl service">
-    <img src="@/assets/img/servise.png" alt="" class="w-auto h-full" />
+  <div
+    class="flex flex-row w-full p-6 bg-white gap-x-10 gap-y-2 rounded-xl service max-md:flex-col max-md:p-3"
+  >
+    <img
+      src="@/assets/img/servise.png"
+      alt=""
+      class="w-auto h-full max-md:w-full max-md:h-auto"
+    />
 
     <div class="flex flex-col justify-between w-full py-4 text-grey">
-      <p class="text-xl">Заболевания носа</p>
-      <div class="flex items-end justify-between w-full gap-6">
+      <p class="text-xl max-md:text-min max-md:leading-4 max-md:mb-4">
+        Заболевания носа
+      </p>
+      <div
+        class="flex flex-row items-end justify-between w-full gap-y-6 max-md:gap-y-4 max-md:flex-col"
+      >
         <div class="text-light-black">
-          <p class="text-3xl font-semibold">
+          <p class="text-3xl font-semibold max-md:text-lg max-md:leading-4">
             Заболевания носа и околоносовых пазух
           </p>
-          <ul class="flex flex-wrap gap-4 mt-6 text-blue">
+          <ul
+            class="flex flex-wrap w-full gap-4 mt-6 text-blue max-md:mt-4 max-md:gap-2"
+          >
             <li>• гайморит</li>
             <li>• сфеноидит</li>
             <li>• фронтит</li>
@@ -19,11 +31,10 @@
         </div>
 
         <button
-          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 w-[300px]"
+          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 w-[300px] max-md:w-full max-md:h-12"
         >
           <svg
-            width="24"
-            height="24"
+            class="w-6 h-6 max-md:w-3 max-md:h-3"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +45,7 @@
               class="fill-white"
             />
           </svg>
-          <span class="text-lg font-medium text-white"
+          <span class="text-lg font-medium text-white max-md:text-xs"
             >Заказать по телефону</span
           >
         </button>

@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full mb-24 mt-52">
     <div class="mb-12 leading-4 text-center text-s px-52 text-grey">
-      <h3 class="text-5xl font-medium text-blue mb-7 font-unbounded">
+      <h3 class="text-5xl font-medium text-blue mb-7 font-unbounded max-md:text-xl">
         Сертификаты и лицензии
       </h3>
       <p>

@@ -6,18 +6,18 @@
       </div>
     </div>
     <div class="container mx-auto">
-      <HeadVue />
-      <Servise />
-      <div class="w-full px-28">
-        <Contact class="mt-28" />
+      <HeadVue class=""/>
+      <Servise class="" />
+      <div class="hidden w-full px-28">
+        <Contact class="mt-28"  />
       </div>
-      <AboutUs class="mt-28" />
-      <Doctors />
-      <Certificate />
-      <Comments />
-      <Consultation />
+      <AboutUs class="hidden mt-28" />
+      <Doctors class="hidden"/>
+      <Certificate class="hidden" />
+      <Comments class="hidden"/>
+      <Consultation class="hidden"/>
     </div>
-    <Foot />
+    <Foot class="hidden"/>
   </div>
 </template>
 <script>
