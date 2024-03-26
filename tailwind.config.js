@@ -12,11 +12,13 @@ module.exports = {
       colors: {
         "light-grey": "#F5F5F7",
         grey: "#5D5D5F",
+        "bold-grey":'#353437',
         back: '#f9f9fc',
         "light-black": "#020105",
         blue: "#3C4BDC",
         'light-black':'rgb(2, 1, 5)',
-        'bor':"#EBEBEB"
+        'bor':"#EBEBEB",
+        'light-back':'#FAFAFA'
       },
       fontSize:{
         min:'12px',

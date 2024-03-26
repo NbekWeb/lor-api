@@ -1,7 +1,7 @@
 <template>
   <div class="w-full py-12 mt-24 border-t border-bor">
     <h1 class="w-full pb-5 text-6xl font-semibold text-black font-unbounded">
-      <div>КРУГЛОСУТОЧНЫЙ</div>
+      <div class="mb-2">КРУГЛОСУТОЧНЫЙ</div>
       <div>ПРЕМИАЛЬНЫЙ ЛОР В ТАШКЕНТЕ</div>
     </h1>
     <div class="flex w-full gap-6 text-grey ">
