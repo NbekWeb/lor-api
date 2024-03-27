@@ -15,7 +15,7 @@
       </p>
     </div>
 
-    <div class="flex w-full gap-6 mx-auto">
+    <div class="flex justify-center w-full gap-6 mx-auto">
       <div
         v-for="n of 5"
         :key="n"
