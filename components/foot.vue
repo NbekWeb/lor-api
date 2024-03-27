@@ -6,7 +6,7 @@
       <div class="flex w-auto pr-0 max-md:w-full max-md:pr-20 h-14">
         <img src="@/assets/img/logo.png" alt="logo" class="w-full h-auto" />
       </div>
-      <div class="">
+      <div >
         <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Главная</p>
         <div class="flex flex-col gap-y-3 foot">
           <p>Наши услуги</p>
@@ -17,12 +17,12 @@
         </div>
       </div>
       <div>
-        <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Услуги</p>
+        <p class="mb-6 text-3xl leading-4 max-md:text-xl max-md:mb-4">Услуги</p>
         <div class="flex flex-col gap-y-3 foot">
-          <p class="mb-4">Лечения уха</p>
-          <p class="mb-4">Лечения носа</p>
-          <p class="mb-4">Лечения горла</p>
-          <p class="mb-4">Лечения головы</p>
+          <p >Лечения уха</p>
+          <p >Лечения носа</p>
+          <p >Лечения горла</p>
+          <p >Лечения головы</p>
         </div>
       </div>
       <div>
