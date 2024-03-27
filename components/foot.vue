@@ -17,7 +17,7 @@
         </div>
       </div>
       <div>
-        <p class="mb-6 text-3xl leading-4 max-md:text-xl max-md:mb-4">Услуги</p>
+        <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Услуги</p>
         <div class="flex flex-col gap-y-3 foot">
           <p >Лечения уха</p>
           <p >Лечения носа</p>
