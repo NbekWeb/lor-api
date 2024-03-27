@@ -3,7 +3,7 @@
     <h3 class="text-5xl font-semibold text-black font-unbounded max-md:text-xl">
       Отзывы
     </h3>
-    <div class="flex flex-row gap-6 mb-10 mt-14 max-md:mt-9 max-md:mb-8">
+    <div class="flex flex-row gap-6 mb-10 mt-14 max-md:mt-9 max-md:mb-8 max-md:flex-col">
       <Comment v-for="item of data" :key="item.id" :item="item" />
     </div>
     <div class="flex justify-center gap-6 mt-8">

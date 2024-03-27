@@ -5,7 +5,7 @@
     >
       Наши доктора
     </h3>
-    <div class="flex gap-16">
+    <div class="flex flex-row gap-16 max-md:flex-col">
       <Doctor  v-for="item in data" :key="item.id" :item="item" />
     </div>
   </div>
