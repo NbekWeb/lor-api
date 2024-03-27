@@ -27,7 +27,7 @@
         </div>
 
         <button
-          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 !w-[300px] max-md:w-full max-md:h-12"
+          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 w-[300px] max-md:w-full max-md:h-12"
         >
           <svg
             class="w-6 h-6 max-md:w-3 max-md:h-3"
