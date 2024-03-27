@@ -1,7 +1,7 @@
 <template>
   <div class="w-[354px] max-md:w-full">
     <img
-      src="@/assets/img/doc.png"
+      :src="require(`@/assets/img/doc${item.id}.png`)"
       alt=""
       class="w-full h-auto rounded-xl max-md:mt-4"
     />
@@ -9,15 +9,19 @@
       <p
         class="flex flex-col mb-3 text-xl font-semibold text-blue max-md:text-s max-md:leading-4"
       >
-        Киргизбоев Ботир Тохирович
+        {{ item.name }}
       </p>
       <p class="text-lg max-md:text-min max-md:leading-4">
-        Главный доктор оториноларинголог
+  {{ item.job }}
       </p>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    item: Object,
+  },
+};
 </script>
 <style lang=""></style>

@@ -3,35 +3,31 @@
     class="flex flex-row w-full p-6 bg-white gap-x-10 gap-y-2 rounded-xl service max-md:flex-col max-md:p-3"
   >
     <img
-      src="@/assets/img/servise.png"
+    :src="require(`@/assets/img/servise${item.id}.png`)"
       alt=""
       class="w-auto h-full max-md:w-full max-md:h-auto"
     />
 
     <div class="flex flex-col justify-between w-full py-4 text-grey">
       <p class="text-xl max-md:text-min max-md:leading-4 max-md:mb-4">
-        Заболевания носа
+        {{ item.title }}
       </p>
       <div
         class="flex flex-row items-end justify-between w-full gap-y-6 max-md:gap-y-4 max-md:flex-col"
       >
         <div class="text-light-black">
           <p class="text-3xl font-semibold max-md:text-lg max-md:leading-4">
-            Заболевания носа и околоносовых пазух
+            {{ item.context }}
           </p>
           <ul
             class="flex flex-wrap w-full gap-4 mt-6 text-blue max-md:mt-4 max-md:gap-2"
           >
-            <li>• гайморит</li>
-            <li>• сфеноидит</li>
-            <li>• фронтит</li>
-            <li>• этмоидит</li>
-            <li>• риниты, в том числе аллергические</li>
+            <li v-for="tag of item.tags" :key="tag">• {{ tag }}</li>
           </ul>
         </div>
 
         <button
-          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 w-[300px] max-md:w-full max-md:h-12"
+          class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 !w-[300px] max-md:w-full max-md:h-12"
         >
           <svg
             class="w-6 h-6 max-md:w-3 max-md:h-3"
@@ -54,7 +50,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    item: Object,
+  },
+};
 </script>
 <style>
 .service button:hover span {

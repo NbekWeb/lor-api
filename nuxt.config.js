@@ -26,6 +26,7 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/swipper',
+    '@/plugins/light'
 
   ],
 

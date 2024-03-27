@@ -6,15 +6,34 @@
       Наши доктора
     </h3>
     <div class="flex gap-16">
-      <Doctor />
-      <Doctor class="max-md:hidden" />
-      <Doctor class="max-md:hidden" />
+      <Doctor  v-for="item in data" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
 <script>
 import Doctor from "./doctor-card.vue";
 export default {
+  data() {
+    return {
+      data: [
+        {
+          id: 1,
+          name: "якубов режаббой фарходович",
+          job: "Главный доктор оториноларинголог",
+        },
+        {
+          id: 2,
+          name: "Киргизбоев Ботир Тохирович",
+          job: "Главный доктор оториноларинголог",
+        },
+        {
+          id: 3,
+          name: "Тохиров Бобур Ботирович",
+          job: "Главный доктор оториноларингологг",
+        },
+      ],
+    };
+  },
   components: {
     Doctor,
   },

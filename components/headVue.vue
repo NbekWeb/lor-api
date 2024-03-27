@@ -10,7 +10,7 @@
       >
         <div class="w-[357px] max-md:w-[281px]">
           <div class="">
-            <div class="swiper-container">
+            <div class="swiper-container heroSwiper">
               <div class="swiper-wrapper">
                 <div
                   v-for="(item, index) in slideImages1"
@@ -24,7 +24,7 @@
                   />
                 </div>
               </div>
-              <div class="absolute bottom-0 swiper-pagination"></div>
+              <div class="absolute bottom-0 swiper-pagination heroPagination"></div>
             </div>
             <!-- <div class="swiper-pagination"></div> -->
             <p
@@ -55,7 +55,7 @@
           class="w-full p-6 max-md:p-3 h-[291px] max-md:h-full max-md:w-1/2 flex flex-col items-center justify-center bg-white rounded-xl"
         >
           <div class="w-full">
-            <div class="swiper-container">
+            <div class="swiper-container heroSwiper">
               <div class="swiper-wrapper">
                 <div
                   v-for="(item, index) in slideImages2"
@@ -69,7 +69,7 @@
                   />
                 </div>
               </div>
-              <div class="absolute bottom-0 swiper-pagination"></div>
+              <div class="absolute bottom-0 swiper-pagination heroPagination"></div>
             </div>
             <p class="mt-6 text-2xl max-md:text-min max-md:leading-3 max-md:mt-2">
               Довольных Пациентов 
@@ -107,14 +107,14 @@ export default {
   mounted() {
     Swiper.use([Navigation, Pagination, Autoplay]);
 
-    const swiper = new Swiper(".swiper-container", {
+    const swiper = new Swiper(".heroSwiper", {
       direction: "horizontal",
       loop: true,
       slidesPerView: 1,
       modules: [Navigation, Pagination, Autoplay],
 
       pagination: {
-        el: ".swiper-pagination",
+        el: ".heroPagination",
         type: "bullets",
         clickable: true,
       },

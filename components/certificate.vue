@@ -15,56 +15,18 @@
       </p>
     </div>
 
-    <div class="flex w-full gap-6">
+    <div class="flex w-full gap-6 mx-auto">
       <div
+        v-for="n of 5"
+        :key="n"
         class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
       >
         <img
-          src="@/assets/img/sertifikat.png"
+          :src="require(`@/assets/img/cer${n}.png`)"
           alt="sertifikat"
           class="h-auto rounded-md w-240px max-md:w-full"
-        />
-      </div>
-      <div
-        class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
-      >
-        <img
-          src="@/assets/img/sertifikat.png"
-          alt="sertifikat"
-          class="h-auto rounded-md w-240px max-md:w-full"
-        />
-      </div>
-
-      <div class="p-[10px] border rounded-lg border-blue max-md:hidden">
-        <img
-          src="@/assets/img/sertifikat.png"
-          alt="sertifikat"
-          class="rounded-md w-240px"
-        />
-      </div>
-      <div class="p-[10px] border rounded-lg border-blue max-md:hidden">
-        <img
-          src="@/assets/img/sertifikat.png"
-          alt="sertifikat"
-          class="rounded-md w-240px"
-        />
-      </div>
-      <div class="p-[10px] border rounded-lg border-blue max-md:hidden">
-        <img
-          src="@/assets/img/sertifikat.png"
-          alt="sertifikat"
-          class="rounded-md w-240px"
-        />
-      </div>
-      <div class="p-[10px] border rounded-lg border-blue max-md:hidden">
-        <img
-          src="@/assets/img/sertifikat.png"
-          alt="sertifikat"
-          class="rounded-md w-240px"
         />
       </div>
     </div>
   </div>
 </template>
-
-<style scoped></style>
