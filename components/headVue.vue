@@ -1,8 +1,8 @@
 <template>
   <div class="w-full py-12 mt-24 border-t border-bor max-md:py-6 max-md:mt-4">
-    <h1 class="w-full pb-5 text-6xl font-medium text-black max-md:text-2xl">
-      <div class="mb-3 font-unbounded">КРУГЛОСУТОЧНЫЙ</div>
-      <div class="font-unbounded">ПРЕМИАЛЬНЫЙ ЛОР В ТАШКЕНТЕ</div>
+    <h1 class="w-full pb-5 text-6xl text-black max-md:text-2xl">
+      <div class="mb-3 font-medium font-unbounded">КРУГЛОСУТОЧНЫЙ</div>
+      <div class="font-medium font-unbounded">ПРЕМИАЛЬНЫЙ ЛОР В ТАШКЕНТЕ</div>
     </h1>
     <div class="flex flex-row w-full gap-6 text-grey max-md:flex-col">
       <div
