@@ -1,6 +1,6 @@
 import Vue from "vue";
-import { Swiper as SwiperClass, Pagination, Navigation } from "swiper/core";
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper as SwiperClass, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper";
 
 import "swiper/swiper-bundle.css";
 
