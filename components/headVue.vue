@@ -102,34 +102,12 @@
   </div>
 </template>
 <script>
-import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
-import "swiper/swiper-bundle.css";
-
 export default {
   data() {
     return {
       slideImages1: ["doc-slide", "doc-slide2", "doc-slide3"],
       slideImages2: ["work-slide", "work-slide2", "work-slide3", "work-slide4"],
     };
-  },
-  mounted() {
-    Swiper.use([Navigation, Pagination, Autoplay]);
-
-    const swiper = new Swiper(".heroSwiper1", {
-      direction: "horizontal",
-      loop: true,
-      slidesPerView: 1,
-      modules: [Navigation, Pagination, Autoplay],
-
-      pagination: {
-        el: ".heroPagination",
-        type: "bullets",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 2000,
-      },
-    });
   },
 };
 </script>

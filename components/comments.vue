@@ -8,7 +8,7 @@
       </h3>
       <div class="flex gap-5">
         <button
-          class="flex items-center justify-center border max-md:h-12 rounded-xl bg-blue hover:bg-white border-blue h-14 w-14 max-md:w-12 swiper-button-next"
+          class="flex items-center j ustify-center border max-md:h-12 rounded-xl bg-blue hover:bg-white border-blue h-14 w-14 max-md:w-12"
         >
           <svg
             width="8"
@@ -27,7 +27,7 @@
           </svg>
         </button>
         <button
-          class="flex items-center justify-center rotate-180 border swiper-button-prev rounded-xl bg-blue hover:bg-white border-blue max-md:h-12 h-14 w-14 max-md:w-12"
+          class="flex items-center justify-center rotate-180 border rounded-xl bg-blue hover:bg-white border-blue max-md:h-12 h-14 w-14 max-md:w-12"
         >
           <svg
             width="8"
@@ -59,8 +59,6 @@
 </template>
 <script>
 import Comment from "./comment-card.vue";
-import { Swiper, Navigation, Autoplay } from "swiper";
-import "swiper/swiper-bundle.css";
 export default {
   data() {
     return {
@@ -90,54 +88,10 @@ export default {
           tags: ["Повреждения барабанной ;", "желез"],
         },
       ],
-      swiper: null,
     };
   },
   components: {
     Comment,
   },
-  mounted() {
-    this.swiper = new Swiper(".heroSwiper", {
-      slidesPerView: 1,
-      modules: [Navigation, Autoplay],
-      spaceBetween: 24,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  },
 };
 </script>
-<style>
-.comment button:hover svg path {
-  stroke: #3c4bdc;
-}
-.swiper-button-prev:after,
-.swiper-container-rtl .swiper-button-next:after,
-.swiper-button-next:after {
-  content: "" !important;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: static;
-
-  width: 56px !important;
-  height: 56px !important;
-  margin-top: 0px !important;
-}
-@media (max-width: 768px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 40px !important;
-    height: 40px !important;
-  }
-}
-</style>

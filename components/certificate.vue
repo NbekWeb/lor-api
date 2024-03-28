@@ -41,9 +41,6 @@
 </template>
 
 <script>
-import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
-import "swiper/swiper-bundle.css";
-// import "lightgallery";
 
 export default {
   data() {
@@ -51,46 +48,8 @@ export default {
       slideImages1: [1, 2, 3, 4, 5],
     };
   },
-  mounted() {
-    // const el = document.getElementById("lightgallery");
-    // window.lightGallery(el);
-    Swiper.use([Navigation, Pagination, Autoplay]);
-
-    const swiper = new Swiper(".customSwiper", {
-      direction: "horizontal",
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 24,
-      modules: [Navigation, Pagination, Autoplay],
-      pagination: {
-        el: ".customPagination",
-        type: "bullets",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 4000,
-      },
-      breakpoints: {
-        1024: {
-          slidesPerView: 5,
-        },
-      },
-    });
-
-    // Initialize LightGallery
-    // this.$nextTick(() => {
-    //   if (process.client) {
-    //     window.lightGallery(document.querySelector(".customSwiper"), {
-    //       selector: ".lightgallery-item",
-    //     });
-    //   }
-    // });
-  },
 };
 </script>
 
 <style>
-.swiper-wrapper {
-  box-sizing: border-box;
-}
 </style>
