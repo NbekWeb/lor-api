@@ -15,18 +15,62 @@
       </p>
     </div>
 
-    <div class="flex flex-wrap justify-center w-full gap-6 mx-auto">
-      <div
-        v-for="n of 5"
-        :key="n"
-        class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
-      >
-        <img
-          :src="require(`@/assets/img/cer${n}.png`)"
-          alt="sertifikat"
-          class="h-auto rounded-md w-240px max-md:w-full"
-        />
+    <div class="swiper-container customSwiper">
+      <div class="swiper-wrapper">
+        <div
+          v-for="(item, index) in slideImages1"
+          :key="index"
+          class="swiper-slide"
+        >
+          <div
+            class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
+          >
+            <img
+              :src="require(`@/assets/img/cer${item}.png`)"
+              :alt="`sertifikat_${index}`"
+              class="h-auto rounded-md w-full"
+            />
+          </div>
+        </div>
       </div>
+      <div class="absolute bottom-0 swiper-pagination customPagination"></div>
     </div>
   </div>
 </template>
+
+<script>
+import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
+import "swiper/swiper-bundle.css";
+
+export default {
+  data() {
+    return {
+      slideImages1: [1, 2, 3, 4, 5], 
+    };
+  },
+  mounted() {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+
+    const swiper = new Swiper(".customSwiper", {
+      direction: "horizontal",
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 24,
+      modules: [Navigation, Pagination, Autoplay],
+      pagination: {
+        el: ".customPagination",
+        type: "bullets",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+    });
+  },
+};
+</script>

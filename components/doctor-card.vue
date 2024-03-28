@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[354px] max-md:w-full">
+  <div class="max-md:w-full">
     <img
       :src="require(`@/assets/img/doc${item.id}.png`)"
       alt=""
@@ -12,7 +12,7 @@
         {{ item.name }}
       </p>
       <p class="text-lg max-md:text-min max-md:leading-4">
-  {{ item.job }}
+        {{ item.job }}
       </p>
     </div>
   </div>

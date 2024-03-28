@@ -167,7 +167,7 @@ export default {
   color: #fff !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .el-button{
     font-size: 14px !important;
   }

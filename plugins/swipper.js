@@ -8,3 +8,6 @@ SwiperClass.use([Pagination, Navigation]);
 
 Vue.component("Swiper", Swiper);
 Vue.component("SwiperSlide", SwiperSlide);
+
+
+

@@ -1,17 +1,26 @@
 <template>
-  <div>
+  <div class="relative">
     <h3
       class="mt-32 mb-20 text-5xl font-semibold text-black font-unbounded max-md:text-xl max-md:mt-16"
     >
       Наши доктора
     </h3>
-    <div class="flex flex-row gap-16 max-md:flex-col">
-      <Doctor  v-for="item in data" :key="item.id" :item="item" />
+    <div class="swiper-container heroSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item of data" :key="item.id">
+          <Doctor :item="item" />
+        </div>
+      </div>
+      <div class="swiper-pagination absolute bottom-20"></div>
     </div>
   </div>
 </template>
+
 <script>
 import Doctor from "./doctor-card.vue";
+import Swiper, { Pagination, Autoplay } from "swiper";
+import "swiper/swiper-bundle.css";
+
 export default {
   data() {
     return {
@@ -32,11 +41,39 @@ export default {
           job: "Главный доктор оториноларингологг",
         },
       ],
+      swiperDoc: null,
     };
   },
   components: {
     Doctor,
   },
+  mounted() {
+    Swiper.use([Pagination, Autoplay]);
+    this.swiper = new Swiper(".heroSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  },
 };
 </script>
-<style lang=""></style>
+
+<style scoped>
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+  margin-bottom: 70px;
+}
+}
+</style>
