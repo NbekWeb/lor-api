@@ -41,5 +41,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+    standalone: true,
+    extend(config, ctx) {
+      config.externals = [
+        {
+          encoding: "encoding",
+        }
+      ];
+    },
   },
 };
