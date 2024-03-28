@@ -26,11 +26,11 @@
             class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
           >
             <!-- <div  id="lightgallery"> -->
-              <img
-                :src="require(`@/assets/img/cer${item}.png`)"
-                :alt="`sertifikat_${index}`"
-                class="h-auto rounded-md w-full"
-              />
+            <img
+              :src="require(`@/assets/img/cer${item}.png`)"
+              :alt="`sertifikat_${index}`"
+              class="w-full h-auto rounded-md"
+            />
             <!-- </div> -->
           </div>
         </div>
@@ -88,3 +88,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+</style>

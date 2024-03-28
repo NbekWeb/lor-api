@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-// src=""
 export default {};
 </script>
 <style lang=""></style>
