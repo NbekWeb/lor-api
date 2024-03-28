@@ -22,7 +22,7 @@
           <ul
             class="flex flex-wrap w-full gap-4 mt-6 text-blue max-md:mt-4 max-md:gap-2"
           >
-            <li v-for="tag of item.tags" :key="tag">• {{ tag }}</li>
+            <li v-for="tag,i of item.tags" :key="i">• {{ tag }}</li>
           </ul>
         </div>
 
