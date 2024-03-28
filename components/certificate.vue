@@ -25,7 +25,7 @@
           <div
             class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
           >
-            <!-- <div class="lightgallery-item"> -->
+            <!-- <div  id="lightgallery"> -->
               <img
                 :src="require(`@/assets/img/cer${item}.png`)"
                 :alt="`sertifikat_${index}`"
@@ -52,6 +52,8 @@ export default {
     };
   },
   mounted() {
+    // const el = document.getElementById("lightgallery");
+    // window.lightGallery(el);
     Swiper.use([Navigation, Pagination, Autoplay]);
 
     const swiper = new Swiper(".customSwiper", {
