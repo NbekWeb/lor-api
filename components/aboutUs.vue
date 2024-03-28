@@ -8,9 +8,15 @@
       <div
         class="flex flex-col w-1/2 text-4xl font-medium max-md:text-xl max-md:w-full"
       >
-        <p class="mb-4 text-black font-unbounded max-md:mb-0">О “777 ЛОР”</p>
-        <p class="text-3xl text-blue font-unbounded max-md:text-s">
-          Более 10 лет заботы о вашем здаровье
+        <p class="mb-4 text-black font-unbounded max-md:mb-0 font-semibold">
+          О “777 ЛОР”
+        </p>
+        <p
+          class="text-3xl text-blue font-unbounded max-md:text-s font-semibold"
+        >
+          Более 10 лет заботы о вашем
+          
+          здаровье
         </p>
         <p
           class="leading-3 text-grey text-s mt-[22px] max-md:text-min font-normal max-md:mt-3"

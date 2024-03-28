@@ -16,16 +16,17 @@
         ref="ruleForm"
         label-width="100%"
         class="demo-ruleForm"
+        id="contact"
       >
         <div class="flex flex-row gap-6 max-md:flex-col">
-          <el-form-item label="Имя" prop="name">
+          <el-form-item label="Имя" prop="name" for="name">
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item>
-          <el-form-item label="Номер" prop="phone">
+          <el-form-item label="Номер" prop="phone" for="phone">
             <el-input v-model="ruleForm.phone"></el-input>
           </el-form-item>
         </div>
-        <el-form-item label="Проблема" prop="problem">
+        <el-form-item label="Проблема" prop="problem" for="problem">
           <el-input v-model="ruleForm.problem"></el-input>
         </el-form-item>
         <div>

@@ -11,8 +11,8 @@
   "dependencies": {
     "core-js": "^3.25.3",
     "element-ui": "^2.15.10",
+    "lg-thumbnail": "^1.2.1",
     "lightgallery": "^2.7.2",
-    "lightgallery.js": "^1.4.0",
     "nuxt": "^2.15.8",
     "swiper": "^6.8.4",
     "v-mask": "^2.3.0",

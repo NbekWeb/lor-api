@@ -4,7 +4,7 @@
       class="mb-12 leading-4 text-center text-s px-52 text-grey max-md:mb-6 max-md:text-min max-md:px-0"
     >
       <h3
-        class="text-5xl font-medium text-blue mb-7 font-unbounded max-md:text-xl max-md:mb-2"
+        class="text-5xl font-semibold text-blue mb-7 font-unbounded max-md:text-xl max-md:mb-2"
       >
         Сертификаты и лицензии
       </h3>
@@ -25,11 +25,13 @@
           <div
             class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
           >
-            <img
-              :src="require(`@/assets/img/cer${item}.png`)"
-              :alt="`sertifikat_${index}`"
-              class="h-auto rounded-md w-full"
-            />
+            <!-- <div class="lightgallery-item"> -->
+              <img
+                :src="require(`@/assets/img/cer${item}.png`)"
+                :alt="`sertifikat_${index}`"
+                class="h-auto rounded-md w-full"
+              />
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -41,11 +43,12 @@
 <script>
 import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
 import "swiper/swiper-bundle.css";
+// import "lightgallery";
 
 export default {
   data() {
     return {
-      slideImages1: [1, 2, 3, 4, 5], 
+      slideImages1: [1, 2, 3, 4, 5],
     };
   },
   mounted() {
@@ -71,6 +74,15 @@ export default {
         },
       },
     });
+
+    // Initialize LightGallery
+    // this.$nextTick(() => {
+    //   if (process.client) {
+    //     window.lightGallery(document.querySelector(".customSwiper"), {
+    //       selector: ".lightgallery-item",
+    //     });
+    //   }
+    // });
   },
 };
 </script>
