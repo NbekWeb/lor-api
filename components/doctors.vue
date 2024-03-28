@@ -5,13 +5,13 @@
     >
       Наши доктора
     </h3>
-    <div class="swiper-container heroSwiper">
+    <div class="swiper-container heroSwiperDoc">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item of data" :key="item.id">
           <Doctor :item="item" />
         </div>
       </div>
-      <div class="swiper-pagination absolute bottom-20"></div>
+      <div class="absolute swiper-pagination bottom-20"></div>
     </div>
   </div>
 </template>
@@ -49,7 +49,7 @@ export default {
   },
   mounted() {
     Swiper.use([Pagination, Autoplay]);
-    this.swiper = new Swiper(".heroSwiper", {
+    this.swiper = new Swiper(".heroSwiperDoc", {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
@@ -73,7 +73,7 @@ export default {
 }
 @media (max-width: 768px) {
   .swiper-container-horizontal > .swiper-pagination-bullets {
-  margin-bottom: 70px;
-}
+    margin-bottom: 70px;
+  }
 }
 </style>
