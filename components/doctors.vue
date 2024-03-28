@@ -5,7 +5,7 @@
     >
       Наши доктора
     </h3>
-    <div class="swiper-container heroSwiperDoc">
+    <div class="swiper-container heroSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="item of data" :key="item.id">
           <Doctor :item="item" />
@@ -18,6 +18,8 @@
 
 <script>
 import Doctor from "./doctor-card.vue";
+import Swiper, { Pagination, Autoplay } from "swiper";
+import "swiper/swiper-bundle.css";
 
 export default {
   data() {
@@ -39,12 +41,39 @@ export default {
           job: "Главный доктор оториноларингологг",
         },
       ],
+      swiperDoc: null,
     };
   },
   components: {
     Doctor,
   },
+  mounted() {
+    Swiper.use([Pagination, Autoplay]);
+    this.swiper = new Swiper(".heroSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  },
 };
 </script>
 
-
+<style scoped>
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    margin-bottom: 70px;
+  }
+}
+</style>
