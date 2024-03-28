@@ -1,7 +1,7 @@
 <template>
   <div class="w-full py-12 mt-24 border-t border-bor max-md:py-6 max-md:mt-4">
     <h1
-      class="w-full pb-5 text-6xl text-black max-md:text-2xl font-bold font-unbounded"
+      class="w-full pb-5 text-6xl font-bold text-black max-md:text-2xl font-unbounded"
     >
       КРУГЛОСУТОЧНЫЙ<br />ПРЕМИАЛЬНЫЙ ЛОР В ТАШКЕНТЕ
     </h1>
@@ -102,6 +102,9 @@
   </div>
 </template>
 <script>
+import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
+import "swiper/swiper-bundle.css";
+
 export default {
   data() {
     return {
@@ -109,10 +112,29 @@ export default {
       slideImages2: ["work-slide", "work-slide2", "work-slide3", "work-slide4"],
     };
   },
+  mounted() {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+
+    const swiper = new Swiper(".heroSwiper1", {
+      direction: "horizontal",
+      loop: true,
+      slidesPerView: 1,
+      modules: [Navigation, Pagination, Autoplay],
+
+      pagination: {
+        el: ".heroPagination",
+        type: "bullets",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2000,
+      },
+    });
+  },
 };
 </script>
 
-<style >
+<style>
 .swiper-pagination-bullet-active {
   background: #fff !important;
 }
