@@ -52,6 +52,9 @@ export default {
     this.swiper = new Swiper(".heroSwiper", {
       slidesPerView: 1,
       spaceBetween: 24,
+      autoplay: {
+        delay: 3000,
+      },
       loop: true,
       pagination: {
         el: ".swiper-pagination",
