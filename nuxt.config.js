@@ -18,14 +18,14 @@ export default {
   css: [
     "element-ui/lib/theme-chalk/index.css",
     "@/assets/style/index.css",
-    "swiper/swiper-bundle.css",
+    // "swiper/swiper-bundle.css",
     // "lightgallery/css/lightgallery.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "@/plugins/element-ui",
-    "@/plugins/swipper",
+    // "@/plugins/swipper",
     // "@/plugins/lightGallery.client.js",
   ],
 
