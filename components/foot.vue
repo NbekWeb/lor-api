@@ -6,7 +6,7 @@
       <div class="flex w-auto pr-0 max-md:w-full max-md:pr-20 h-14">
         <img src="@/assets/img/logo.png" alt="logo" class="w-full h-auto" />
       </div>
-      <div >
+      <div>
         <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Главная</p>
         <div class="flex flex-col gap-y-3 foot">
           <p>Наши услуги</p>
@@ -19,10 +19,10 @@
       <div>
         <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Услуги</p>
         <div class="flex flex-col gap-y-3 foot">
-          <p >Лечения уха</p>
-          <p >Лечения носа</p>
-          <p >Лечения горла</p>
-          <p >Лечения головы</p>
+          <p>Лечения уха</p>
+          <p>Лечения носа</p>
+          <p>Лечения горла</p>
+          <p>Лечения головы</p>
         </div>
       </div>
       <div>
@@ -34,18 +34,16 @@
             class="flex items-center gap-3"
           >
             <img src="@/assets/img/icon/loc.svg" alt="" class="icon-white" />
-            Улица Богишамол 1
+            {{ staticInfo?.adres }}
           </a>
           <a href="mailto:info@lor777.uz" class="flex items-center gap-3">
             <img src="@/assets/img/icon/gmail.svg" alt="" class="icon-white" />
-            info@lor777.uz
+            {{ staticInfo?.email }}
           </a>
-          <a href="tel:+998881080707" class="flex items-center gap-2">
-            <img
-              src="@/assets/img/icon/call.svg"
-              alt=""
-              class="icon-white"
-            />+998 88 108 07 07</a
+          <a :href="'tel:' + phoneNumber[0]" class="flex items-center gap-2">
+            <img src="@/assets/img/icon/call.svg" alt="" class="icon-white" />{{
+              phoneNumber[0]
+            }}</a
           >
         </div>
       </div>
@@ -53,7 +51,20 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    staticInfo: { type: Object, required: true },
+  },
+  computed: {
+    phoneNumber() {
+      if (this.staticInfo?.nbm) {
+        return this.staticInfo.nbm.split(",");
+      } else {
+        return ["", ""];
+      }
+    },
+  },
+};
 </script>
 <style>
 .icon-white {

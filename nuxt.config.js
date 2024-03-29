@@ -24,7 +24,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src:"@/plugins/element-ui",ssr:false}
+    { src: "@/plugins/element-ui", ssr: false },
+    "~/plugins/axios",
     // "@/plugins/swipper",
     // "@/plugins/lightGallery.client.js",
   ],
@@ -36,7 +37,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios", "@nuxtjs/dotenv"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -46,7 +47,7 @@ export default {
       config.externals = [
         {
           encoding: "encoding",
-        }
+        },
       ];
     },
   },

@@ -6,13 +6,19 @@
       Наши услуги
     </h2>
     <div class="flex flex-col gap-y-6">
-      <Card v-for="item in data" :key="item.id" :item="item" />
+      <Card v-for="item in servises" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
 <script>
 import Card from "./cardServise.vue";
 export default {
+  props: {
+    servises: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       data: [

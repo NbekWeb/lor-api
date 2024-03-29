@@ -3,26 +3,28 @@
     class="flex flex-row w-full p-6 bg-white gap-x-10 gap-y-2 rounded-xl service max-md:flex-col max-md:p-3"
   >
     <img
-    :src="require(`@/assets/img/servise${item.id}.png`)"
+      :src="item?.image"
       alt=""
       class="w-auto h-full max-md:w-full max-md:h-auto"
     />
 
     <div class="flex flex-col justify-between w-full py-4 text-grey">
       <p class="text-xl max-md:text-min max-md:leading-4 max-md:mb-4">
-        {{ item.title }}
+        {{ item?.category?.title }}
       </p>
       <div
         class="flex flex-row items-end justify-between w-full gap-y-6 max-md:gap-y-4 max-md:flex-col"
       >
         <div class="text-light-black">
           <p class="text-3xl font-semibold max-md:text-lg max-md:leading-4">
-            {{ item.context }}
+            {{ item.title }}
           </p>
           <ul
             class="flex flex-wrap w-full gap-4 mt-6 text-blue max-md:mt-4 max-md:gap-2"
           >
-            <li v-for="tag,i of item.tags" :key="i">• {{ tag }}</li>
+            <li v-for="tag of item?.illnesess" :key="tag?.id">
+              • {{ tag?.title }}
+            </li>
           </ul>
         </div>
 

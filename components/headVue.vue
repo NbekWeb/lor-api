@@ -1,9 +1,11 @@
 <template>
   <div class="w-full py-12 mt-24 border-t border-bor max-md:py-6 max-md:mt-4">
     <h1
-      class="w-full pb-5 text-6xl font-bold text-black max-md:text-2xl font-unbounded"
+      class="w-full pb-5 text-6xl font-bold text-black max-md:text-2xl font-unbounded leading-[71px]"
     >
-      КРУГЛОСУТОЧНЫЙ<br />ПРЕМИАЛЬНЫЙ ЛОР В ТАШКЕНТЕ
+    {{ titleParts[0] }}
+    <br/>
+    {{ titleParts[1] }}
     </h1>
 
     <div class="flex flex-row w-full gap-6 text-grey max-md:flex-col">
@@ -106,11 +108,24 @@ import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default {
+  props: {
+    title:''
+  },
   data() {
     return {
       slideImages1: ["doc-slide", "doc-slide2", "doc-slide3"],
       slideImages2: ["work-slide", "work-slide2", "work-slide3", "work-slide4"],
+      
     };
+  },
+  computed: {
+    titleParts() {
+      if (this.title) {
+        return this.title.split(',');
+      } else {
+        return ['', '']; // Return empty strings if title is not provided
+      }
+    }
   },
   mounted() {
     Swiper.use([Navigation, Pagination, Autoplay]);

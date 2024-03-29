@@ -47,10 +47,9 @@
         </button>
       </div>
     </div>
-
     <div class="swiper-container heroSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item of data" :key="item.id">
+        <div class="swiper-slide" v-for="item of reviews" :key="item.id">
           <Comment :item="item" />
         </div>
       </div>
@@ -62,6 +61,12 @@ import Comment from "./comment-card.vue";
 import { Swiper, Navigation, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 export default {
+  props: {
+    reviews: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
       data: [

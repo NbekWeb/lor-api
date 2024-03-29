@@ -17,20 +17,16 @@
 
     <div class="swiper-container customSwiper">
       <div class="swiper-wrapper">
-        <div
-          v-for="(item, index) in slideImages1"
-          :key="index"
-          class="swiper-slide"
-        >
+        <div v-for="item in certificates" :key="item?.id" class="swiper-slide">
           <div
             class="p-[10px] border rounded-lg border-blue flex items-center justify-center max-md:p-[5px]"
           >
             <!-- <div class="lightgallery-item"> -->
-              <img
-                :src="require(`@/assets/img/cer${item}.png`)"
-                :alt="`sertifikat_${index}`"
-                class="w-full h-auto rounded-md"
-              />
+            <img
+              :src="item?.image"
+              :alt="item?.title"
+              class="w-full h-auto rounded-md"
+            />
             <!-- </div> -->
           </div>
         </div>
@@ -43,13 +39,13 @@
 <script>
 import { Pagination, Navigation, Autoplay, Swiper } from "swiper";
 import "swiper/swiper-bundle.css";
-// import "lightgallery";
 
 export default {
-  data() {
-    return {
-      slideImages1: [1, 2, 3, 4, 5],
-    };
+  props: {
+    certificates: {
+      type: Array,
+      required: true,
+    },
   },
   mounted() {
     Swiper.use([Navigation, Pagination, Autoplay]);
@@ -57,7 +53,7 @@ export default {
     const swiper = new Swiper(".customSwiper", {
       direction: "horizontal",
       loop: true,
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 24,
       modules: [Navigation, Pagination, Autoplay],
       pagination: {
@@ -74,15 +70,6 @@ export default {
         },
       },
     });
-
-    // Initialize LightGallery
-    // this.$nextTick(() => {
-    //   if (process.client) {
-    //     window.lightGallery(document.querySelector(".customSwiper"), {
-    //       selector: ".lightgallery-item",
-    //     });
-    //   }
-    // });
   },
 };
 </script>

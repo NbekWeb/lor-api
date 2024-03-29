@@ -20,7 +20,7 @@
       >
         <div class="flex flex-row gap-6 max-md:flex-col">
           <el-form-item label="Имя" prop="name" for="name">
-            <el-input v-model="ruleForm.name"></el-input>
+            <el-input v-model="ruleForm.name" placeholder="Ваше имя"></el-input>
           </el-form-item>
           <el-form-item label="Номер" prop="phone" for="phone">
             <el-input v-model="ruleForm.phone"></el-input>
@@ -59,6 +59,7 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -72,13 +73,6 @@ export default {
           {
             required: true,
             message: "Введите ваше имя",
-            trigger: "blur",
-          },
-        ],
-        problem: [
-          {
-            required: true,
-            message: "Пожалуйста, опишите вашу проблему",
             trigger: "blur",
           },
         ],
@@ -100,7 +94,17 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert("Form submitted successfully!");
+          axios
+            .post("https://lorapi.pythonanywhere.com/api/application/create", {
+              name: this.ruleForm.name,
+              number: this.ruleForm.phone,
+            })
+            .then(() => {
+              this.resetForm(formName);
+            })
+            .catch((error) => {
+              console.error("Error submitting the form:", error);
+            });
         } else {
           console.log("Error submitting the form!");
           return false;
@@ -126,6 +130,7 @@ export default {
   },
 };
 </script>
+
 <style>
 .el-form-item {
   display: flex !important;
@@ -169,10 +174,8 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .el-button{
+  .el-button {
     font-size: 14px !important;
   }
 }
-
-
 </style>
