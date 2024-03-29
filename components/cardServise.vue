@@ -13,7 +13,7 @@
         {{ item?.category?.title }}
       </p>
       <div
-        class="flex flex-row items-end justify-between w-full gap-y-6 max-md:gap-y-4 max-md:flex-col"
+        class="flex flex-row items-end justify-between w-full gap-y-6 max-md:gap-y-4 max-md:flex-col max-md:items-start"
       >
         <div class="text-light-black">
           <p class="text-3xl font-semibold max-md:text-lg max-md:leading-4">
