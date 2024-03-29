@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2
+    id="services"
       class="mb-10 text-4xl font-semibold text-black font-unbounded max-md:text-xl max-md:leading-6 max-md:mb-4"
     >
       Наши услуги

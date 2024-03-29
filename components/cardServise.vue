@@ -28,7 +28,7 @@
           </ul>
         </div>
 
-        <button
+        <a href="#contact"
           class="flex items-center justify-center gap-1 rounded-lg bg-blue h-14 w-[300px] max-md:w-full max-md:h-12"
         >
           <svg
@@ -46,7 +46,7 @@
           <span class="text-lg font-medium text-white max-md:text-xs"
             >Заказать по телефону</span
           >
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -59,13 +59,13 @@ export default {
 };
 </script>
 <style>
-.service button:hover span {
+.service a:hover span {
   color: #3c4bdc;
 }
-.service button:hover svg path {
+.service a:hover svg path {
   fill: #3c4bdc;
 }
-.service button:hover {
+.service a:hover {
   border: 1px solid #3c4bdc;
   background: #fff;
 }

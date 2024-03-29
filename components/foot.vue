@@ -9,7 +9,7 @@
       <div>
         <p class="mb-6 text-3xl max-md:text-xl max-md:mb-4">Главная</p>
         <div class="flex flex-col gap-y-3 foot">
-          <p>Наши услуги</p>
+          <a href="#services">Наши услуги</a>
           <p>О нас</p>
           <p>Доктора</p>
           <p>Отзывы</p>

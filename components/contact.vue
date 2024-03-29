@@ -1,5 +1,6 @@
 <template>
   <div
+  id="contact"
     class="relative w-full h-[300px] rounded-xl bg-blue px-16 max-md:h-[450px] max-md:px-4 py-6"
   >
     <div
@@ -19,15 +20,18 @@
         id="contact"
       >
         <div class="flex flex-row gap-6 max-md:flex-col">
-          <el-form-item label="Имя" prop="name" for="name">
-            <el-input v-model="ruleForm.name" placeholder="Ваше имя"></el-input>
+          <el-form-item prop="name" for="name">
+            <el-input v-model="ruleForm.name" placeholder="Имя *"></el-input>
           </el-form-item>
-          <el-form-item label="Номер" prop="phone" for="phone">
-            <el-input v-model="ruleForm.phone"></el-input>
+          <el-form-item prop="phone" for="phone">
+            <el-input v-model="ruleForm.phone" placeholder="Номер *"></el-input>
           </el-form-item>
         </div>
-        <el-form-item label="Проблема" prop="problem" for="problem">
-          <el-input v-model="ruleForm.problem"></el-input>
+        <el-form-item prop="problem" for="problem">
+          <el-input
+            v-model="ruleForm.problem"
+            placeholder="Проблема *"
+          ></el-input>
         </el-form-item>
         <div>
           <el-button
@@ -98,6 +102,7 @@ export default {
             .post("https://lorapi.pythonanywhere.com/api/application/create", {
               name: this.ruleForm.name,
               number: this.ruleForm.phone,
+              message: this.ruleForm.problem,
             })
             .then(() => {
               this.resetForm(formName);
@@ -136,13 +141,7 @@ export default {
   display: flex !important;
   border-bottom: 1px solid #fff;
 }
-.el-form-item__label,
-.el-form-item__label:before {
-  color: #ebebeb !important;
-  text-align: left !important;
-  padding: 0 !important;
-  font-family: "Unbounded" !important;
-}
+
 .el-form-item__label {
   width: auto !important;
 }
@@ -150,7 +149,10 @@ export default {
   background: inherit !important;
   border: none !important;
   padding: 0 !important;
-  color: #fff !important;
+  color: #ebebeb !important;
+  font-family: Unbounded, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
 }
 .el-form-item__content {
   margin-left: 10px !important;

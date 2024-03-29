@@ -30,7 +30,7 @@ import axios from "axios";
 export default {
   async asyncData() {
     try {
-      const url = process.env.BASE_URL;
+      const url = process.env.BASE_URL || "https://lorapi.pythonanywhere.com";
       const certificatesResponse = await axios.get(`${url}/api/certificates`);
       const servicesResponse = await axios.get(`${url}/api/services`);
       const reviewsResponse = await axios.get(`${url}/api/reviews`);
