@@ -20,6 +20,7 @@
           <Consultation :staticInfo="staticInfo" />
         </div>
         <Foot :staticInfo="staticInfo" />
+        
       </div>
     </client-only>
   </div>
